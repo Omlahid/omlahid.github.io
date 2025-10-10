@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: #493c60;
+    color: #fff;
+}
+
+body a {
+    color: #afb6d1;
+}
+
+/* Header container */
+.header {
+    background: #45598b;
+    color: #fff;
+}
+
+/* Flex container */
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Nav menu */
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav>li {
+    position: relative;
+}
+
+.nav>li>a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav>li>a:hover {
+    background: #617baa;
+}
+
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #617baa;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background: #5e7284;
+}
+
+/* Show dropdown on desktop hover */
+@media (min-width: 768px) {
+    .nav>li:hover .dropdown {
+        display: block;
+    }
+}
+
+/* Hamburger button (mobile only) */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: #333;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav>li {
+        width: 100%;
+    }
+
+    .dropdown {
+        position: static;
+    }
+
+    .dropdown.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.body-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
