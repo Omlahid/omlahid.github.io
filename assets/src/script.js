@@ -1,5 +1,3 @@
-console.log("Hello!");
-
 document.addEventListener("DOMContentLoaded", (event) => {
     const hamburger = document.getElementById("hamburger");
     const nav = document.getElementById("nav");
@@ -14,8 +12,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         item.addEventListener("click", e => {
             const dropdown = item.nextElementSibling;
             if (dropdown && dropdown.classList.contains("dropdown")) {
-                e.preventDefault(); // prevent link navigation
-                dropdown.classList.toggle("show");
+                if (window.innerWidth <= 768) {
+                    e.preventDefault(); // only block navigation on mobile
+                    dropdown.classList.toggle("show");
+                }
             }
         });
     });
