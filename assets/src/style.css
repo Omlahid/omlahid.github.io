@@ -226,3 +226,7 @@ a.list-individual-link.post {
 .list-individual-item {
     margin: 1rem 0;
 }
+
+.comment-header {
+    padding: 1.5rem 0;
+}
