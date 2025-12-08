@@ -230,3 +230,10 @@ a.list-individual-link.post {
 .comment-header {
     padding: 1.5rem 0;
 }
+
+.writing-pager {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
